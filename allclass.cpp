@@ -21,4 +21,18 @@ class Place{
     int glon;
 }
 
-class
+JvTime::dump2JSON
+()
+{
+  Json::Value result;
+  std::string *str_ptr = this->getTimeString();
+  result["time"] = (*str_ptr);
+  delete str_ptr;
+
+#ifdef _ECS36B_DEBUG_
+  std::cout << result.toStyledString() << std::endl;
+#endif /* _ECS36B_DEBUG_ */
+
+  return result;
+}
+
