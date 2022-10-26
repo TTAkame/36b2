@@ -1,8 +1,9 @@
-CC = gcc
-CFLAGS = -g
-TARGET = robin
+OBJS =  main.o allclass.o
+CFLAG = -Wall -g
+CC = g++
 
-$(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) -o out $(TARGET).c
+hello:${OBJ}
+   ${CC} ${CFLAGS} -o $@ ${OBJS}
+
 clean:
-	$(RM) $(TARGET)
+   -rm -f *.o *.core
