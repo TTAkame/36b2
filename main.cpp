@@ -10,6 +10,18 @@ int main(){
     Person mom;
     Person gm;
     Person wf;
+    
+    Thing cap;
+    Thing wine;
+    Thing cake;
+    Thing wine;
+    Thing oak;
+    
+    Place spot;
+    Place wood;
+    Place home;
+    Place toak;
+    
   //Little Red Ridding Hood wore the Cap
     
   //Her mom gave her the cake and wine
