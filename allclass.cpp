@@ -6,20 +6,20 @@ class Person{
   public:
     char name[10];
 
-}
+};
 
 class Thing{
   public:
     char name[10];
   
-}
+};
 
 class Place{
   public:
     char name[30];
     int glat;
     int glon;
-}
+};
 
 Person::dump2JSON
 ()
@@ -33,5 +33,5 @@ Person::dump2JSON
 #endif /* _ECS36B_DEBUG_ */
 
   return result;
-}
+};
 
