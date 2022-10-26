@@ -30,9 +30,16 @@ int main(){
     Time four;
     
   //Little Red Ridding Hood wore the Cap
+  
+  red.name = "Little Red Ridding Hood";
+  mom.name = "Her Mom";
+  gm.name = "Grandma";
+  wf.name = "Wolf";
     
   //Her mom gave her the cake and wine
     
+  
+  
   //Little Red met the wolf at a particular spot in the wood
     
   //Grandma was at her own home right outside of the wood and there were three large oak trees nearby
