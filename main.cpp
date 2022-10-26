@@ -1,6 +1,7 @@
 
 #include<iostream>
 
+
 #include "allclass.h"
 using namespace std;
 
@@ -21,6 +22,11 @@ int main(){
     Place wood;
     Place home;
     Place toak;
+    
+    Time one;
+    Time two;
+    Time three;
+    Time four;
     
   //Little Red Ridding Hood wore the Cap
     
