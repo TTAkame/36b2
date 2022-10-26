@@ -2,8 +2,8 @@ OBJS =  main.o allclass.o
 CFLAG = -Wall -g
 CC = g++
 
-hello:${OBJ}
-   ${CC} ${CFLAGS} -o $@ ${OBJS}
+hello: ${OBJS}
+   ${CC} ${CFLAGS} -o robin ${OBJS}
 
 clean:
-   -rm -f *.o *.core
+   -rm -f *.o robin
