@@ -21,12 +21,11 @@ class Place{
     int glon;
 }
 
-JvTime::dump2JSON
+Person::dump2JSON
 ()
 {
   Json::Value result;
-  std::string *str_ptr = this->getTimeString();
-  result["time"] = (*str_ptr);
+  result["time"] = ("test");
   delete str_ptr;
 
 #ifdef _ECS36B_DEBUG_
