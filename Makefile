@@ -1,9 +1,21 @@
-OBJS =  main.o allclass.o
-CFLAG = -Wall -g
-CC = g++
 
-hello: ${OBJS}
-   ${CC} ${CFLAGS} -o robin ${OBJS}
+CC = g++ -std=c++14
 
-clean:
-   -rm -f *.o robin
+CFLAGS = -g -I/Users/tt/vcpkg/installed/arm64-osx/include
+LDFLAGS = 	-L/Users/tt/vcpkg/installed/arm64-osx/lib -ljsoncpp
+
+#-I/Users/tt/vcpkg/installed/arm64-osx/include -L/Users/tt/vcpkg/installed/arm64-osx/lib -ljsoncpp
+
+all:	run
+
+tet.o:	tet.cpp tet.h
+	$(CC) -c $(CFLAGS) tet.cpp
+	
+main.o: main.cpp tet.h
+	$(CC) -c $(CFLAGS) main.cpp
+	
+run:	tet.o main.o
+	g++ -std=c++14 tet.o main.o -o run $(LDFLAGS)
+	rm -rf *.o
+	
+
