@@ -12,27 +12,73 @@
 using namespace std;
 
 
-Json::Value
-Person::dump2json(){
+Json::Value Person::dump2json(){
 	Json::Value result{};
-	result["name"] = name;
+	result["Name"] = name;
     return result;
 }
 
+Json::Value Time::dump2json(){
+	Json::Value result{};
+	result["Time"] = name;
+    return result;
+}
 
-Json::Value
-Place::dump2json(){
+Json::Value Location::dump2json(){
     Json::Value result{};
-    result["name"] = name;
+    result["Location"] = name;
     return result;
 }
 
 
-Json::Value
-Thing::dump2json(){
+Json::Value Thing::dump2json(){
     Json::Value result{};
-    result["name"] = name;
+    result["Thing"] = name;
     return result;
 }
 
+
+/* Json::Value */
+/* Record::dump2json(){ */
+/*     Json::Value result{}; */
+/*     result["Record"] = pname; */
+/*     return result; */
+/* } */
+
+Json::Value Record::dump2json(){
+    Json::Value resulta{};
+    Json::Value resultb{};
+
+    resulta = pa.dump2json();
+    resultb = pb.dump2json();
+
+    return resulta;
+    /* return resultb; */
+}
+
+void Record::setPerson(Person ps){
+    pa = ps;
+}
+
+void Record::setPerson(Person p1, Person p2){
+    pa = p1;
+    pb = p1;
+}
+
+void Record::setThing(Thing tg){
+    ta = tg;
+}
+
+void Record::setThing(Thing tg,Thing thg){
+    ta = tg;
+    tb = thg;
+}
+
+void Record::setLocation(Location ln){
+    lon = ln;
+}
+
+void Record::setTime(Time te){
+    tme = te;
+}
 
