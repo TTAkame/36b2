@@ -46,14 +46,12 @@ Json::Value Thing::dump2json(){
 /* } */
 
 Json::Value Record::dump2json(){
-    Json::Value resulta{};
-    Json::Value resultb{};
+    Json::Value result{};
 
-    resulta = pa.dump2json();
-    resultb = pb.dump2json();
+    result["person 1"] = pa.dump2json();
+    result["person 2"] = pb.dump2json();
 
-    return resulta;
-    /* return resultb; */
+    return result;
 }
 
 void Record::setPerson(Person ps){
@@ -62,7 +60,7 @@ void Record::setPerson(Person ps){
 
 void Record::setPerson(Person p1, Person p2){
     pa = p1;
-    pb = p1;
+    pb = p2;
 }
 
 void Record::setThing(Thing tg){
@@ -81,4 +79,6 @@ void Record::setLocation(Location ln){
 void Record::setTime(Time te){
     tme = te;
 }
+
+
 
