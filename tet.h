@@ -19,7 +19,7 @@ class Person{
 		Json::Value dump2json();
 };
 
-class Place{
+class Location{
     public:
         char name[50];
         Json::Value dump2json();
@@ -33,6 +33,33 @@ class Thing{
         Json::Value dump2json();
 
 
+};
+
+class Time{
+    public:
+        char name[20];
+        Json::Value dump2json();
+
+
+};
+
+class Record {
+    public:
+        /* char pname[20] = "record pn"; */
+        Person pa;
+        Person pb;
+        Thing ta;
+        Thing tb;
+        Location lon;
+        Time tme;
+        /* Json::Value dump2json(); */
+        Json::Value dump2json();
+        void setPerson(Person ps);
+        void setPerson(Person p1, Person p2);
+        void setThing(Thing tg);
+        void setThing(Thing tg,Thing thg);
+        void setLocation(Location ln);
+        void setTime(Time te);
 };
 
 #endif
