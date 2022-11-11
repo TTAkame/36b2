@@ -46,12 +46,12 @@ class Time{
 class Record {
     public:
         /* char pname[20] = "record pn"; */
-        Person pa;
-        Person pb;
-        Thing ta;
-        Thing tb;
-        Location lon;
-        Time tme;
+        Person pa{""};
+        Person pb{""};
+        Thing ta{""};
+        Thing tb{""};
+        Location lon{""};
+        Time tme{""};
         /* Json::Value dump2json(); */
         Json::Value dump2json();
         void setPerson(Person ps);
