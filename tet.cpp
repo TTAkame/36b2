@@ -14,26 +14,26 @@ using namespace std;
 
 Json::Value Person::dump2json(){
 	Json::Value result{};
-	result["Name"] = name;
+	result["Description"] = name;
     return result;
 }
 
 Json::Value Time::dump2json(){
 	Json::Value result{};
-	result["Time"] = name;
+	result["Description"] = name;
     return result;
 }
 
 Json::Value Location::dump2json(){
     Json::Value result{};
-    result["Location"] = name;
+    result["Description"] = name;
     return result;
 }
 
 
 Json::Value Thing::dump2json(){
     Json::Value result{};
-    result["Thing"] = name;
+    result["Description"] = name;
     return result;
 }
 
@@ -41,11 +41,21 @@ Json::Value Thing::dump2json(){
 Json::Value Record::dump2json(){
     Json::Value result{};
 
-    result["Person 1"] = pa.dump2json();
-    result["Person 2"] = pb.dump2json();
+    if (pb.dump2json() == "") {
+        result["Person"] = pa.dump2json();
+    }
+    else {
+        result["Person 1"] = pa.dump2json();
+        result["Person 2"] = pb.dump2json();
+    }
 
-    result["Thing 1"] = ta.dump2json();
-    result["Thing 2"] = tb.dump2json();
+    if (tb.dump2json() == "") {
+        result["Thing"] = ta.dump2json();
+    }
+    else {
+        result["Thing 1"] = ta.dump2json();
+        result["Thing 2"] = tb.dump2json();
+    }
 
     result["Location"] = lon.dump2json();
     result["Time"] = tme.dump2json();
