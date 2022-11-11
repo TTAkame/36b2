@@ -38,18 +38,17 @@ Json::Value Thing::dump2json(){
 }
 
 
-/* Json::Value */
-/* Record::dump2json(){ */
-/*     Json::Value result{}; */
-/*     result["Record"] = pname; */
-/*     return result; */
-/* } */
-
 Json::Value Record::dump2json(){
     Json::Value result{};
 
-    result["person 1"] = pa.dump2json();
-    result["person 2"] = pb.dump2json();
+    result["Person 1"] = pa.dump2json();
+    result["Person 2"] = pb.dump2json();
+
+    result["Thing 1"] = ta.dump2json();
+    result["Thing 2"] = tb.dump2json();
+
+    result["Location"] = lon.dump2json();
+    result["Time"] = tme.dump2json();
 
     return result;
 }
@@ -79,6 +78,4 @@ void Record::setLocation(Location ln){
 void Record::setTime(Time te){
     tme = te;
 }
-
-
 
