@@ -11,31 +11,36 @@
 
 using namespace std;
 
-
-Json::Value Person::dump2json(){
+Json::Value Parameter::dump2json(){
 	Json::Value result{};
 	result["Description"] = name;
     return result;
 }
 
-Json::Value Time::dump2json(){
-	Json::Value result{};
-	result["Description"] = name;
-    return result;
-}
+/* Json::Value Person::dump2json(){ */
+/* 	Json::Value result{}; */
+/* 	result["Description"] = name; */
+/*     return result; */
+/* } */
 
-Json::Value Location::dump2json(){
-    Json::Value result{};
-    result["Description"] = name;
-    return result;
-}
+/* Json::Value Time::dump2json(){ */
+/* 	Json::Value result{}; */
+/* 	result["Description"] = name; */
+/*     return result; */
+/* } */
+
+/* Json::Value Location::dump2json(){ */
+/*     Json::Value result{}; */
+/*     result["Description"] = name; */
+/*     return result; */
+/* } */
 
 
-Json::Value Thing::dump2json(){
-    Json::Value result{};
-    result["Description"] = name;
-    return result;
-}
+/* Json::Value Thing::dump2json(){ */
+/*     Json::Value result{}; */
+/*     result["Description"] = name; */
+/*     return result; */
+/* } */
 
 
 Json::Value Record::dump2json(){
