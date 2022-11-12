@@ -41,18 +41,19 @@ Json::Value Thing::dump2json(){
 Json::Value Record::dump2json(){
     Json::Value result{};
 
-    if (pb.dump2json() == "") {
+    if (strlen(pb.name) == 0) {
         result["Person"] = pa.dump2json();
+      
     }
     else {
         result["Person 1"] = pa.dump2json();
         result["Person 2"] = pb.dump2json();
     }
 
-    if (tb.dump2json() == "") {
+    if (strlen(tb.name) == 0 && strlen(ta.name)!=0) {
         result["Thing"] = ta.dump2json();
     }
-    else {
+    else if (strlen(ta.name)!=0 && strlen(tb.name)!=0){
         result["Thing 1"] = ta.dump2json();
         result["Thing 2"] = tb.dump2json();
     }
