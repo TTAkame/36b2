@@ -16,6 +16,6 @@ main.o: main.cpp tet.h
 	
 run:	tet.o main.o
 	g++ -std=c++14 tet.o main.o -o run $(LDFLAGS)
-	rm -rf *.o
-	
+clean:
+	rm -rf tet.o main.o run
 
