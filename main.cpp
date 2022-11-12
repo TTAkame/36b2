@@ -16,27 +16,45 @@ int main(){
   
  
     
-    Time one{"8:00"};
-    Time two{"10:00"};
-    Time three{"11:00"};
-    Time four{"12:00"};
+    Time one;
+    one.name = "8:00";
+    
+    Time two;
+    two.name = "9:00";
+    Time three;
+    three.name = "10:00";
+    Time four;
+    four.name = "11:00";
     /* cout << (one.dump2json()).toStyledString() << endl; */
     /* cout << (two.dump2json()).toStyledString() << endl; */
     
-    Person red{"Little Red"};
-    Person mom{"Mom"};
-    Person grandma{"Grandma"};
-    Person wolf{"wolf"};
+    Person red;
+    red.name="Little Red";
+    Person mom;
+    mom.name="Mom";
+    Person grandma;
+    grandma.name="Grandma";
+    Person wolf;
+    wolf.name="wolf";
     
-    Thing cap{"cap"};
-    Thing wine{"wine"};
-    Thing cake{"cake"};
-    Thing oak{"oak"};
+    Thing cap;
+    cap.name="cap";
+    Thing wine;
+    wine.name="wine";
+    Thing cake;
+    cake.name="cake";
+    Thing oak;
+    oak.name = "oak";
 
-    Location iw{"a spot in the wood"};
-    Location ow{"outside of the wood"};
-    Location ot{"nearby three large oak trees"};
-    Location hm{"home"};
+    Location iw;
+    iw.name = "a spot in the wood";
+    Location ow;
+    ow.name = "outside of the wood";
+    Location ot;
+    ot.name = "nearby three large oak trees";
+    
+    Location hm;
+    hm.name = "home";
 
     
 
