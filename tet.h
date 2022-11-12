@@ -12,15 +12,17 @@
 #include <json/reader.h>
 #include <json/writer.h>
 #include <json/value.h>
+#include <string.h>
+using namespace std;
 
 class Parameter {
-	public:
-		char name[20];
-		virtual Json::Value dump2json();
+    public:
+        string name;
+        virtual Json::Value dump2json();
 };
 
 class Person : public Parameter {
-	public:
+    public:
 };
 
 class Location : public Parameter {
@@ -38,12 +40,12 @@ class Time : public Parameter {
 class Record {
     public:
         /* char pname[20] = "record pn"; */
-        Person pa{""};
-        Person pb{""};
-        Thing ta{""};
-        Thing tb{""};
-        Location lon{""};
-        Time tme{""};
+    Person pa;
+    Person pb;
+    Thing ta;
+    Thing tb;
+    Location lon;
+    Time tme;
         /* Json::Value dump2json(); */
         Json::Value dump2json();
         void setPerson(Person ps);
