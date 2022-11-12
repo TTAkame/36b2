@@ -13,34 +13,26 @@
 #include <json/writer.h>
 #include <json/value.h>
 
-class Person{
+class Parameter {
 	public:
 		char name[20];
-		Json::Value dump2json();
+		virtual Json::Value dump2json();
 };
 
-class Location{
-    public:
-        char name[50];
-        Json::Value dump2json();
-
-
+class Person : public Parameter {
+	public:
 };
 
-class Thing{
+class Location : public Parameter {
     public:
-        char name[20];
-        Json::Value dump2json();
-
-
 };
 
-class Time{
+class Thing : public Parameter {
     public:
-        char name[20];
-        Json::Value dump2json();
+};
 
-
+class Time : public Parameter {
+    public:
 };
 
 class Record {
